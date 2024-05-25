@@ -53,9 +53,7 @@ class VentasController extends Controller
     public function show($id)
     {
         $venta = Ventas::find($id);
-        if(is_null($venta)){
-            return abort(404);
-        }
+
         $productos = DB::table('productos')
         ->orderBy('nombre_producto')
         ->get();
