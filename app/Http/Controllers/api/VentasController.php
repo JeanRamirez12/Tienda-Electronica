@@ -53,6 +53,7 @@ class VentasController extends Controller
     public function show($id)
     {
         $venta = Ventas::find($id);
+
         $productos = DB::table('productos')
         ->orderBy('nombre_producto')
         ->get();
